@@ -1,8 +1,9 @@
-#define water_pump_motor 0
-#define water_level_sensor 0
-#define buzzer 0
-#define led 0
-#define button 0
+/* 핀 번호 지정 */
+#define water_pump_motor 4
+#define water_level_sensor 5
+#define buzzer 2
+#define led 13
+#define button 3
 
 void setup() {
   /* 핀 모드 설정 */
@@ -10,6 +11,7 @@ void setup() {
   pinMode(water_level_sensor, INPUT_PULLUP);
   pinMode(buzzer, OUTPUT);
   pinMode(led, OUTPUT);
+  pinMode(button, INPUT_PULLUP);
 
   Serial.begin(115200); // 모니터링용 시리얼 통신 시작
 }
